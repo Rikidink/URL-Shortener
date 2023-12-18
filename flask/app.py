@@ -25,7 +25,7 @@ def index():
     if request.method == 'POST':
         # get long URL
         long_url = request.form['long_url']
-        if not long_url.startswith("http://") and not long_url.startswith("http://"):
+        if not long_url.startswith("http://") and not long_url.startswith("https://"):
             long_url = "http://" + long_url
 
         # generate shortened URL
@@ -33,9 +33,9 @@ def index():
 
         # add URL to dictionary with short URL as key
         url_dict[short_url] = long_url
-        print("DICT", url_dict)
+        # print("DICT", url_dict)
 
-        return render_template('index.html', short_url=short_url)
+        return render_template('index.html', short_url=request.base_url+short_url)
     
     # GET request
     return render_template('index.html')
