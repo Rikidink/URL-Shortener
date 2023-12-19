@@ -1,6 +1,10 @@
 import string
 import random
 import validators
+import qrcode
+import base64
+import io
+from PIL import Image
 from flask import Flask, request, redirect, render_template
 
 app = Flask(__name__)
@@ -17,6 +21,16 @@ def gen_short_url():
 def is_valid_url(url):
     """True if input URL is valid otherwise false"""
     return validators.url(url)
+
+def gen_qrcode(long_url):
+    """
+    Takes long url string as input and returns base64 encoded qrcode image of url
+    """
+    img = qrcode.make(long_url)
+    data = io.BytesIO()
+    img.save(data, "PNG")
+    encoded_img = base64.b64encode(data.getvalue())
+    return encoded_img
 
 
 # POST when they submit a URL to shorten, otherwise show main page
@@ -35,7 +49,9 @@ def index():
         url_dict[short_url] = long_url
         # print("DICT", url_dict)
 
-        return render_template('index.html', short_url=request.base_url+short_url)
+        encoded_qr = gen_qrcode(long_url)
+
+        return render_template('index.html', short_url=request.base_url+short_url,qr_img=encoded_qr.decode('utf-8'))
     
     # GET request
     return render_template('index.html')

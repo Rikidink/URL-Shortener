@@ -21,6 +21,7 @@
 
     {% if short_url %}
     <p>Your shortened URL: {{ short_url }}</p>
+    <img src="data:image/png;base64, {{ qr_img }}">
     {% endif %}
 </body>
 </html>
