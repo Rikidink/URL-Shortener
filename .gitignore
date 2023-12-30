@@ -1,2 +1,6 @@
 /flask/env
 /flask/__pycache__
+
+/flask/node_modules
+/flask/package.json
+/flask/package-lock.json
