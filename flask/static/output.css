@@ -544,10 +544,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.static {
-  position: static;
-}
-
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -563,11 +559,6 @@ video {
 
 .font-bold {
   font-weight: 700;
-}
-
-.text-blue-600 {
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
 .text-blue-500 {
