@@ -4,3 +4,6 @@
 /flask/node_modules
 /flask/package.json
 /flask/package-lock.json
+
+/flask/tailwind.config.js
+/flask/static/input.css

@@ -1,3 +1,8 @@
+/* 
+Deprecated: html files now use output.css due to tailwind.
+This file is still here just in case.
+*/
+
 body {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
