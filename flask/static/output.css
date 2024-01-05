@@ -568,6 +568,18 @@ video {
   inset-inline-end: 0.625rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -583,6 +595,10 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .block {
