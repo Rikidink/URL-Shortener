@@ -12,6 +12,11 @@ app = Flask(__name__)
 # Dictionary that will store the URLS
 url_dict = {}
 
+# qr code class
+qr = qrcode.QRCode(
+    border=0
+)
+
 def gen_short_url():
     """Generates random 6 character alphanumerical string"""
     selection = string.ascii_letters + string.digits
@@ -26,7 +31,10 @@ def gen_qrcode(long_url):
     """
     Takes long url string as input and returns base64 encoded qrcode image of url
     """
-    img = qrcode.make(long_url)
+    # img = qrcode.make(long_url)
+    qr.clear()
+    qr.add_data(long_url)
+    img = qr.make_image()
     data = io.BytesIO()
     img.save(data, "PNG")
     encoded_img = base64.b64encode(data.getvalue())
