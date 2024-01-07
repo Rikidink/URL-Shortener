@@ -30,7 +30,19 @@ env/Scripts/activate
 ---  
 
 **Future plans for features/refinements:**  
-- Use a front-end framework (probably React)
-- Implement QR codes for shortened URLs
-- Use an actual database for storage of URLs (probably PostgreSQL)
-- Deploy the project somewhere
+- ~~Use a front-end framework (probably React)~~ (don't really need one, just using Tailwind for CSS now)
+- ~~Implement QR codes for shortened URLs~~
+- ~~Deploy the project somewhere~~ (deployed on AWS currently, but probably will change)
+- Use an actual database for storage of URLs (probably PostgreSQL) --> IMPORTANT
+- Add the about and contact pages
+- Better URL input validation
+- Might have to fix copy to clipboard for mobile
+- Improve overall UI/UX
+  - Support for small screens/mobile (i.e: hamburger menu)
+  - Dark mode (obviously not necessary I just think its cool)
+  - Fix qrcode border (and make the qrcode cooler)
+  - Ability to expand qrcode when button is pressed
+  - Have a nice animated background for the page (maybe gradient?)
+  - Display shortened URLs in a list instead of one at a time
+  - Add success/fail messages for input and copy to clipboard
+
