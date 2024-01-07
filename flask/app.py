@@ -14,7 +14,7 @@ url_dict = {}
 
 # qr code class
 qr = qrcode.QRCode(
-    border=0
+    border=2
 )
 
 def gen_short_url():
