@@ -60,7 +60,7 @@
     <div class="max-w-2xl mx-auto text-center p-4 bg-white rounded-lg shadow-lg mt-8">
         <p>Your shortened URL:</p>
         <p id="shortened_url" class="text-3xl font-semibold py-2 mr-4">{{ short_url }}</p>
-        <button class="text-white bg-purple-500 hover:bg-purple-700 font-medium rounded-lg text-sm px-2 py-1" onclick="copyToClipboard()">Copy</button>
+        <button class="text-white bg-purple-500 hover:bg-purple-700 font-medium rounded-lg text-sm px-3 py-1" onclick="copyToClipboard()">Copy</button>
         <img src="data:image/png;base64, {{ qr_img }}" class="mx-auto mt-2">
     </div>
     {% endif %}
