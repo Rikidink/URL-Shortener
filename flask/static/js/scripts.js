@@ -18,8 +18,6 @@ const saveImage = () => {
 
 
 // Hamburger dropdown menu
-const hamburger = () => {
-    document.getElementById('hamburger-icon').addEventListener('click', function () {
+const toggleHamburger = () => {
     document.getElementById('navbar-default').classList.toggle('hidden');
-    });
 }
