@@ -15,3 +15,11 @@ const saveImage = () => {
     link.click();
     document.body.removeChild(link);
 }
+
+
+// Hamburger dropdown menu
+const hamburger = () => {
+    document.getElementById('hamburger-icon').addEventListener('click', function () {
+    document.getElementById('navbar-default').classList.toggle('hidden');
+    });
+}
