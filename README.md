@@ -35,14 +35,15 @@ env/Scripts/activate
 - ~~Deploy the project somewhere~~ (deployed on AWS currently, but probably will change)
 - Use an actual database for storage of URLs (probably PostgreSQL) --> IMPORTANT
 - Add the about and contact pages
-- Better URL input validation
+- Use regex for better URL validation
 - Might have to fix copy to clipboard for mobile
 - Improve overall UI/UX
   - ~~Support for small screens/mobile (i.e: hamburger menu)~~
-  - Dark mode (obviously not necessary I just think its cool)
-  - ~~Fix qrcode border~~ (and make the qrcode cooler)
+  - Dark mode button (obviously not necessary I just think its cool)
+  - ~~Fix qrcode border~~ (and make the qrcode cooler: maybe allow users to customise qrcode?)
   - Ability to expand qrcode when button is pressed
   - Have a nice animated background for the page (maybe gradient?)
   - Display shortened URLs in a list instead of one at a time
   - Add success/fail messages for input and copy to clipboard
+  - File name for qrcode image should be destination URL
 
