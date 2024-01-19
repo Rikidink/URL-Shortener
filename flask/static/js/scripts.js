@@ -5,12 +5,12 @@ const copyToClipboard = () => {
 }
 
 // Save image button
-const saveImage = () => {
+const saveImage = (destination="rickly") => {
     const image = document.getElementById("qrCode");
     const link = document.createElement('a');
 
     link.href = image.src;
-    link.download = "rickly.png";
+    link.download = destination.concat(".png");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
