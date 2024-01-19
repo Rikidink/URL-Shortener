@@ -38,9 +38,9 @@ env/Scripts/activate
 - Better URL input validation
 - Might have to fix copy to clipboard for mobile
 - Improve overall UI/UX
-  - Support for small screens/mobile (i.e: hamburger menu)
+  - ~~Support for small screens/mobile (i.e: hamburger menu)~~
   - Dark mode (obviously not necessary I just think its cool)
-  - Fix qrcode border (and make the qrcode cooler)
+  - ~~Fix qrcode border~~ (and make the qrcode cooler)
   - Ability to expand qrcode when button is pressed
   - Have a nice animated background for the page (maybe gradient?)
   - Display shortened URLs in a list instead of one at a time
