@@ -5,6 +5,7 @@ import qrcode
 import base64
 import io
 from PIL import Image
+import re
 from flask import Flask, request, redirect, render_template
 
 app = Flask(__name__)
