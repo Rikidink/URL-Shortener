@@ -48,6 +48,6 @@ env/Scripts/activate
   - Add success/fail messages for input and copy to clipboard
   - File name for qrcode image should be destination URL
 
- **Credits/References:**
+ **Credits/References:**  
  Background animation by a [user on TailwindFlex](https://tailwindflex.com/@anonymous/background-animation)
 
