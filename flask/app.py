@@ -6,7 +6,7 @@ import base64
 import io
 from PIL import Image
 import re
-from flask import Flask, request, redirect, render_template
+from flask import Flask, request, redirect, render_template, url_for
 
 app = Flask(__name__)
 
@@ -56,14 +56,16 @@ def index():
 
         # add URL to dictionary with short URL as key
         url_dict[short_url] = long_url
-        # print("DICT", url_dict)
 
         encoded_qr = gen_qrcode(long_url)
 
-        return render_template('index.html', short_url=request.base_url+short_url,qr_img=encoded_qr.decode('utf-8'))
+        return redirect(url_for('index', short_url=request.base_url+short_url, qr_img=encoded_qr.decode('utf-8')))
     
     # GET request
-    return render_template('index.html')
+    short_url = request.args.get('short_url')
+    qr_img = request.args.get('qr_img')
+
+    return render_template('index.html', short_url=short_url, qr_img=qr_img)
 
 
 # Route to redirect user
