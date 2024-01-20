@@ -37,6 +37,7 @@ env/Scripts/activate
 - Add the about and contact pages
 - Use regex for better URL validation
 - Might have to fix copy to clipboard for mobile
+- Make common classes for buttons and stuff in tailwind
 - Improve overall UI/UX
   - ~~Support for small screens/mobile (i.e: hamburger menu)~~
   - Dark mode button (obviously not necessary I just think its cool)
