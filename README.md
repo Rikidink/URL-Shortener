@@ -34,7 +34,7 @@ env/Scripts/activate
 - ~~Implement QR codes for shortened URLs~~
 - ~~Deploy the project somewhere~~ (deployed on AWS currently, but probably will change)
 - Use an actual database for storage of URLs (probably PostgreSQL) --> IMPORTANT
-- Add the about and contact pages
+- ~~Add the about and contact pages~~
 - Use regex for better URL validation
 - Might have to fix copy to clipboard for mobile
 - Make common classes for buttons and stuff in tailwind
