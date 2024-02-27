@@ -27,3 +27,49 @@
 </div>
 <!--End Background Animation Body-->
 
+<body class="bg-purple-500">
+
+    <!-- Navbar -->
+    <nav class="bg-white p-4">
+        <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto">
+            <a href="/">
+                <span class="self-center text-2xl font-mono font-semibold text-purple-600">Rickly</span>
+            </a>
+            <!-- Hamburger -->
+            <button onclick="toggleHamburger()" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none">
+                <span class="sr-only">Open main menu</span>
+                <!-- Hamburger image -->
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+            <!-- Items -->
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
+                    <li>
+                        <a href="/" class="text-purple-600">Home</a>
+                    </li>
+                    <li>
+                        <a href="/about" class="text-gray-900 hover:text-purple-600">About</a>
+                    </li>
+                    <li>
+                        <a href="/contact" class="text-gray-900 hover:text-purple-600">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Content-->
+    <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-sm mt-16 p-6 text-center">
+        <h1 class="text-center text-2xl font-mono font-bold text-purple-500 pb-4">About</h1>
+        <p class="font-semibold">
+            A pretty simple URL shortener that I developed, nothing too special about it. The Flask backend handles all the redirecting and generating of the links.
+            Tailwind CSS is used to make designing these pages a bit nicer. I do have plans to actually integrate a real database though &#128513.
+        </p>
+    </div>
+
+
+</body>
+</html>
+
