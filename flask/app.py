@@ -67,6 +67,10 @@ def index():
 
     return render_template('index.html', short_url=short_url, qr_img=qr_img)
 
+@app.route('/about')
+def about():
+    return render_template("about.html")
+
 
 # Route to redirect user
 @app.route('/<short_url>')
