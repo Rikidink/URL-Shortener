@@ -18,11 +18,8 @@ app = Flask(__name__)
 from config import DB_CONNECTION_STRING
 app.config['SQLALCHEMY_DATABASE_URI'] = DB_CONNECTION_STRING
 
-from models import URL
-db = SQLAlchemy(app)
-
-# Dictionary that will store the URLS
-url_dict = {}
+from models import URL, db
+db.init_app(app)
 
 # qr code class
 qr = qrcode.QRCode(
@@ -65,9 +62,6 @@ def index():
         # generate shortened URL
         short_url = gen_short_url()
 
-        # add URL to dictionary with short URL as key
-        url_dict[short_url] = long_url
-
         # add to database
         url_entry = URL(id=short_url, long_url=long_url)
         db.session.add(url_entry)
@@ -86,9 +80,11 @@ def index():
 # Route to redirect user
 @app.route('/<short_url>')
 def redirect_url(short_url):
-    if short_url in url_dict:
-        return redirect(url_dict[short_url])
+    urL_entry = URL.query.get(short_url)
+    if urL_entry:
+        return redirect(urL_entry.long_url)
     return render_template("404.html"), 404
+
 
 @app.route('/about')
 def about():
