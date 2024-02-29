@@ -10,6 +10,11 @@ from flask import Flask, request, redirect, render_template, url_for
 
 app = Flask(__name__)
 
+# Theres an unversioned config.py with the connection string 
+# Modify this as you wish with your own db connection string
+from config import DB_CONNECTION_STRING
+app.config['SQLALCHEMY_DATABASE_URI'] = DB_CONNECTION_STRING
+
 # Dictionary that will store the URLS
 url_dict = {}
 
