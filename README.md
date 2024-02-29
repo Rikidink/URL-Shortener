@@ -33,11 +33,12 @@ env/Scripts/activate
 - ~~Use a front-end framework (probably React)~~ (don't really need one, just using Tailwind for CSS now)
 - ~~Implement QR codes for shortened URLs~~
 - ~~Deploy the project somewhere~~ (deployed on AWS currently, but probably will change)
-- Use an actual database for storage of URLs (probably PostgreSQL) --> IMPORTANT
+- ~~Use an actual database for storage of URLs (probably PostgreSQL)~~
 - ~~Add the about and contact pages~~
 - Use regex for better URL validation
 - Might have to fix copy to clipboard for mobile
 - Make common classes for buttons and stuff in tailwind
+- Have a counter for amount of times a URL is visited
 - Improve overall UI/UX
   - ~~Support for small screens/mobile (i.e: hamburger menu)~~
   - Dark mode button (obviously not necessary I just think its cool)
