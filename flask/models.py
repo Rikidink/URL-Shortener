@@ -5,6 +5,9 @@ db = SQLAlchemy()
 
 # Model for urls table
 class URL(db.Model):
+    # table to be used in db is called urls
+    __tablename__ = 'urls'
+
     id = db.Column(db.String(6), primary_key=True)
     long_url = db.Column(db.String(2000), nullable=False)
 
