@@ -1,10 +1,15 @@
-﻿# Flask URL-Shortener
-Simple URL shortener developed with Flask.  
+﻿# Rickly: URL Shortener
+Simple URL shortener developed with Flask backend using Tailwind CSS for styling.
+URLs stored in a PostgreSQL database and is interfaced using SQLAlchemy.  
 Very early stages of development right now with plans to implement more features and refinements with a better user interface.  
 
 ---
 
-**Try it out (idk why you would though):**  
+## Prerequisites
+Requires a PostgreSQL database (you can use other databases but PostgreSQL is preferred for seamless integration).
+
+## Setup | Try it out!
+
 1. Clone the repository
 2. Create a virtual environment within the flask directory and activate:
 
@@ -19,17 +24,24 @@ env/Scripts/activate
 (venv) pip install -r requirements.txt
 ```
 
-4. Run the app:  
+4. In the flask folder, create a config.py file which contains your db connection string (replace username, password, and database with your respective names):  
+
+```python
+DB_CONNECTION_STRING = 'postgresql://username:password@localhost:5432/database'
+```
+
+5. Run the app:  
 
 ```console
 (venv) flask run
 ```
 
-5. Go to http://127.0.0.1:5000 to try it out.  
+6. Go to http://127.0.0.1:5000 to try it out.  
 
 ---  
 
-**Future plans for features/refinements:**  
+## Future plans/ideas/refinements:
+ 
 - ~~Use a front-end framework (probably React)~~ (don't really need one, just using Tailwind for CSS now)
 - ~~Implement QR codes for shortened URLs~~
 - ~~Deploy the project somewhere~~ (deployed on AWS currently, but probably will change)
